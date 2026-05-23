@@ -8,8 +8,14 @@
   </head>
   <body>
 
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- STARS -->
+    <canvas id="stars" style="position:fixed;top:0;left:0;z-index:0;pointer-events:none;"></canvas>
+
     <!-- NAV -->
-    <nav>
+    <nav style="position:relative;z-index:1;">
       <span class="nav-name">Your Name</span>
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
@@ -19,19 +25,32 @@
       </ul>
     </nav>
 
-    <!-- CONTACT FORM -->
-    <main>
+    <!-- CONTACT -->
+    <main style="position:relative;z-index:1;">
       <section class="contact-section">
-        <h2>Contact</h2>
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="tel" placeholder="Phone (optional)" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
+        <p class="section-label">Get in Touch</p>
+
+        <form class="contact-form">
+          <div class="form-field">
+            <input type="text" id="name" placeholder="Name" autocomplete="off" />
+          </div>
+          <div class="form-field">
+            <input type="email" id="email" placeholder="Email" autocomplete="off" />
+          </div>
+          <div class="form-field">
+            <input type="tel" id="phone" placeholder="Phone (optional)" autocomplete="off" />
+          </div>
+          <div class="form-field">
+            <textarea id="message" placeholder="Message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
         </form>
+
       </section>
     </main>
+
+    <!-- PAGE TRANSITION OVERLAY -->
+    <div class="overlay" id="overlay"></div>
 
     <script src="../js/main.js"></script>
   </body>

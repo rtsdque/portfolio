@@ -8,8 +8,14 @@
   </head>
   <body>
 
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- STARS -->
+    <canvas id="stars" style="position:fixed;top:0;left:0;z-index:0;pointer-events:none;"></canvas>
+
     <!-- NAV -->
-    <nav>
+    <nav style="position:relative;z-index:1;">
       <span class="nav-name">Your Name</span>
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
@@ -19,17 +25,40 @@
       </ul>
     </nav>
 
-    <!-- PROJECT LIST -->
-    <main>
-      <section class="work-list">
-        <h2>Work</h2>
-        <ul>
-          <li><a href="#">Project One</a></li>
-          <li><a href="#">Project Two</a></li>
-          <li><a href="#">Project Three</a></li>
+    <!-- WORK LIST -->
+    <main style="position:relative;z-index:1;">
+      <section class="work-section">
+        <div class="work-header">
+          <p class="section-label">Selected Work</p>
+        </div>
+        <ul class="work-list">
+          <li class="work-item">
+            <a href="#" target="_blank">
+              <span class="work-number">01</span>
+              <span class="work-title">Project One</span>
+              <span class="work-arrow">↗</span>
+            </a>
+          </li>
+          <li class="work-item">
+            <a href="#" target="_blank">
+              <span class="work-number">02</span>
+              <span class="work-title">Project Two</span>
+              <span class="work-arrow">↗</span>
+            </a>
+          </li>
+          <li class="work-item">
+            <a href="#" target="_blank">
+              <span class="work-number">03</span>
+              <span class="work-title">Project Three</span>
+              <span class="work-arrow">↗</span>
+            </a>
+          </li>
         </ul>
       </section>
     </main>
+
+    <!-- PAGE TRANSITION OVERLAY -->
+    <div class="overlay" id="overlay"></div>
 
     <script src="../js/main.js"></script>
   </body>
